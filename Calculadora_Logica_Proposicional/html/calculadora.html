@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora Lógica Proposicional</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm bg-body-tertiary" data-bs-theme="dark">
+      <div class="container-md">
+        <a class="navbar-brand" href="/index.html"
+          >Calculadora Lógica Proposicional</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link active" aria-current="page" href="/index.html"
+              >Inicio</a
+            >
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="/html/calculadora.html"
+              >Calculadora</a
+            >
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="/html/about.html"
+              >Nosotros</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <div class="text-center">
+        <h2>¡Bienvenidos!</h2>
+        <p>
+          Si quieres ver un tutorial antes de usar nuestra calculadora, presiona el siguiente botón
+        </p>
+        <button class="btn btn-primary" type="button" id="verTutorialBtn">Ver Tutorial</button>
+      </div>
+    </div>
+
+    <!-- Tutorial -->
+    <div id="tutorial" class="container mt-5 hidden">
+      <h2>Tutorial para Usar la Calculadora de Expresiones Lógicas</h2>
+      <p>
+        Esta guía te mostrará cómo usar la calculadora de expresiones lógicas paso a paso. La calculadora te permite evaluar expresiones lógicas y generar una tabla de verdad basada en las variables y operadores que especifiques.
+      </p>
+      <p>Al abrir la calculadora, verás dos secciones principales:</p>
+      <ul>
+        <li>
+          <strong>Sección de Expresiones Lógicas</strong>
+        </li>
+        <li>
+          <strong>Sección de Proposiciones en Lenguaje Natural</strong>
+        </li>
+      </ul>
+      <hr>
+      <br>
+
+      <h3>Sección de Expresiones Lógicas</h3>
+
+      <h3>Paso 1: Selecciona los Valores de las Variables</h3>
+      <p>
+        <strong>p</strong> y <strong>q</strong> son las variables lógicas iniciales. Puedes seleccionar <code>true</code> o <code>false</code> para cada una de ellas desde los menús desplegables.
+      </p>
+      <p>
+        Si necesitas más variables, haz clic en el botón <strong>"+"</strong> para agregar más variables.
+      </p>
+
+      <h4>Paso 2: Introduce la Expresión Lógica</h4>
+      <p>
+        En el campo <strong>Expresión</strong>, escribe la expresión lógica que deseas evaluar. Puedes usar los operadores proporcionados en los botones:
+      </p>
+      <ul>
+        <li><strong>¬</strong> (Negación)</li>
+        <li><strong>∧</strong> (Conjunción/AND)</li>
+        <li><strong>∨</strong> (Disyunción/OR)</li>
+        <li><strong>→</strong> (Implicación)</li>
+        <li><strong>←</strong> (Implicación Inversa)</li>
+        <li><strong>↔</strong> (Bicondicional)</li>
+      </ul>
+      <p>
+        Haz clic en el botón correspondiente para agregar el operador a la expresión.
+      </p>
+
+      <h4>Paso 3: Evaluar la Expresión</h4>
+      <p>
+        Una vez que hayas escrito la expresión, haz clic en el botón <strong>"Calcular"</strong>. El resultado se mostrará en el campo <strong>Resultados</strong>.
+      </p>
+      <p>
+        Para limpiar todos los campos y empezar de nuevo, haz clic en <strong>"Limpiar Todo"</strong>.
+      </p>
+
+      <h4>Paso 4: Generar la Tabla de Verdad</h4>
+      <p>
+        Después de calcular, una tabla de verdad se generará automáticamente en la sección <strong>Tabla de Verdad</strong>. Esta tabla muestra todas las combinaciones posibles de las variables y el resultado de la expresión para cada combinación.
+      </p>
+      <hr>
+      <br>
+
+      <h3>Sección de Proposiciones en Lenguaje Natural</h3>
+
+      <h4>Paso 1: Introduce las Proposiciones</h4>
+      <p>
+        En los campos <strong>p</strong> y <strong>q</strong>, puedes escribir las proposiciones en lenguaje natural que corresponden a las variables lógicas.
+      </p>
+      <p>
+        Por ejemplo, podrías escribir "p: Hoy es lunes" y "q: Está soleado".
+      </p>
+
+      <h4>Paso 2: Ver la Respuesta</h4>
+      <p>
+        En la sección <strong>Respuesta</strong>, puedes ver el resultado de la expresion indicada.
+      </p>
+      <hr>
+      <br>
+
+      <h3>Ejemplo Práctico</h4>
+
+      <h4>Evaluación de la Expresión</h4>
+      <p>
+        Supongamos que quieres evaluar la expresión lógica <code> ¬p ∨ q </code> :
+      </p>
+      <ol>
+        <li>
+          Selecciona los valores para <strong>p</strong> y <strong>q</strong>. Digamos <code>p = true</code> y <code>q = false</code>.
+        </li>
+        <li>
+          En el campo <strong>Expresión</strong>, escribe <code>¬p ∨ q</code>.
+        </li>
+        <li>
+          Haz clic en <strong>"Calcular"</strong>. Verás el resultado en el campo <strong>Resultados</strong>.
+        </li>
+        <li>
+          La tabla de verdad mostrará todas las combinaciones posibles de <strong>p</strong> y <strong>q</strong> y los resultados de la expresión para cada combinación.
+        </li>
+      </ol>
+
+      <h4>Introducción de Proposiciones en Lenguaje Natural</h4>
+      <ol>
+        <li>En el campo <strong>p</strong>, escribe "Hoy es lunes".</li>
+        <li>En el campo <strong>q</strong>, escribe "Está soleado".</li>
+        <li>
+          Basado en el resultado de la expresión lógica, podras ver la pertinente <strong>Respuesta</strong>.
+        </li>
+      </ol>
+      <hr>
+      <br>
+
+      <h3>Resumen</h3>
+      <p>
+        Esta calculadora de expresiones lógicas es una herramienta poderosa para evaluar y analizar proposiciones lógicas. Puedes definir las variables, escribir expresiones lógicas complejas y obtener tanto el resultado como la tabla de verdad correspondiente. Además, puedes mapear estas expresiones a proposiciones en lenguaje natural para un análisis más profundo con nuestra <strong>IA</strong> integrada.
+      </p>
+      <p>
+        ¡Esperamos que este tutorial te haya sido útil! Si tienes alguna pregunta adicional, no dudes en preguntar.
+      </p>
+    </div>
+
+    <div class="container mt-4">
+      <div class="d-flex flex-column flex-md-row justify-content-center">
+        <div class="container container-custom m-2">
+          <div class="row mb-3">
+            <div class="col">
+              <label for="select1">p</label>
+              <select id="select1" class="form-select" aria-label="p value">
+                <option value="true">true</option>
+                <option value="false">false</option>
+              </select>
+            </div>
+            <div class="col">
+              <label for="select2">q</label>
+              <select id="select2" class="form-select" aria-label="q value">
+                <option value="true">true</option>
+                <option value="false" selected>false</option>
+              </select>
+            </div>
+            <div class="col d-flex align-items-end">
+              <button class="btn btn-primary" id="addVariable">&plus;</button>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col">
+              <label for="input3">Expresión</label>
+              <input type="text" id="input3" class="form-control" />
+            </div>
+          </div>
+          <div class="row mb-3 text-center">
+            <div class="col-2 mb-2">
+              <button class="btn btn-secondary w-100 btn-operator">&not;</button>
+            </div>
+            <div class="col-2 mb-2">
+              <button class="btn btn-secondary w-100 btn-operator">&and;</button>
+            </div>
+            <div class="col-2 mb-2">
+              <button class="btn btn-secondary w-100 btn-operator">&or;</button>
+            </div>
+            <div class="col-2 mb-2">
+              <button class="btn btn-secondary w-100 btn-operator">&rarr;</button>
+            </div>
+            <div class="col-2 mb-2">
+              <button class="btn btn-secondary w-100 btn-operator">&larr;</button>
+            </div>
+            <div class="col-2 mb-2">
+              <button class="btn btn-secondary w-100 btn-operator">&harr;</button>
+            </div>
+          </div>
+          <div class="row mb-3 text-center">
+            <div class="col-6 mb-2">
+              <button class="btn btn-success w-100 btn-operator">Calcular</button>
+            </div>
+            <div class="col-6 mb-2">
+              <button class="btn btn-danger w-100 btn-operator">Limpiar Todo</button>
+            </div>
+          </div>
+          <div class="row result">
+            <div class="col">
+              <label for="output1">Resultados</label>
+              <input type="text" id="output1" class="form-control" disabled />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="truthTable">Tabla de Verdad:</label>
+            <div id="truthTable" class="table-responsive"></div>
+          </div>
+        </div>
+
+        <div class="container container-custom m-2">
+          <div class="row mb-3">
+            <div class="col">
+              <label for="proposition1">p</label>
+              <input
+                type="text"
+                id="proposition1"
+                class="form-control"
+                placeholder="Proposición 1 en lenguaje natural"
+              />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <label for="proposition2">q</label>
+              <input
+                type="text"
+                id="proposition2"
+                class="form-control"
+                placeholder="Proposición 2 en lenguaje natural"
+              />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <h5>Respuesta:</h5>
+              <textarea id="resultIA" class="form-control"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+      <div class="container">
+        <p class="mb-0">&copy; 2024 Calculadora Lógica Proposicional. Todos los derechos reservados.</p>
+        <p class="mb-0">
+          Síguenos en Github:
+          <a href="https://github.com/Leanquiroga"><i class="bi bi-github"></i></a>
+        </p>
+      </div>
+    </footer>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script type="module" src="/js/apiServer.js"></script>
+    <script>
+      document.getElementById("verTutorialBtn").addEventListener("click", function() {
+        const tutorial = document.getElementById("tutorial");
+        const button = document.getElementById("verTutorialBtn");
+        tutorial.classList.toggle("hidden");
+        if (tutorial.classList.contains("hidden")) {
+          button.textContent = "Ver Tutorial";
+        } else {
+          button.textContent = "Ocultar Tutorial";
+          tutorial.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    </script>
+  </body>
+</html>

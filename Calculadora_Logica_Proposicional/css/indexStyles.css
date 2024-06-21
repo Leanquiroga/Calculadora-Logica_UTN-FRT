@@ -1,0 +1,33 @@
+.custom-img {
+  max-width: 100%;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .custom-img {
+    max-width: 300px;
+  }
+}
+.custom-btn {
+  margin-top: 1rem;
+}
+.table-container {
+  margin-bottom: 40px;
+}
+
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+.bi {
+  color: white;
+  margin: 3px;
+}
